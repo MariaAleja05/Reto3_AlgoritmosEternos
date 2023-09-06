@@ -4,7 +4,7 @@
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo:
 ```mermaid
 flowchart TB;
-    A([START])--> B[/"n==0 ; Divisors==[]" ; i==0 ; j==0/]
+    A([START])--> B[/"n==0 ; Divisors==[] ; i==0 ; j==0"/]
     B --> C[Insert number n]
     C --> W[/n/]
     W ---> D{n>1}
@@ -55,18 +55,18 @@ else:
 ```mermaid
 flowchart TB;
     A([START])--> B["X==0 ; Y==0; n==0"]
-    B --> C[Insert number n]
+    B --> C["Insert number n"]
     C --> D[/n/]
-    D --> E{n > 0}
-    E -->|NO| F[Insert an integer number > 0]
+    D --> E{"n > 0"}
+    E -->|NO| F["Insert an integer number > 0"]
     F ----> C
-    E -->|YES| H[X=n/2]
+    E -->|YES| H["X=n/2"]
     H --> Z([X])
     Z --> J["Y=(0.5)*((X)+(n/X))"]
-    J --> I{X-Y < 0.0001}
-    I -- FALSE --> K[X=Y]
+    J --> I{"X-Y < 0.0001"}
+    I -- FALSE --> K["X=Y"]
     K --> Z
-    I -- TRUE --> M[√n is:]
+    I -- TRUE --> M["√n is:"]
     M --> N[/Y/]
     N --> O((END))
 ```
