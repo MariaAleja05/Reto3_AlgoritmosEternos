@@ -4,7 +4,7 @@
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo:
 ```mermaid
 flowchart TB;
-    A([START])--> B[/"n==0 ; Divisors==[] ; i==0 ; j==0"/]
+    A([START])--> B[/"n=0 ; Divisors=[] ; i=0 ; j=0"/]
     B --> C[Insert number n]
     C --> W[/n/]
     W ---> D{n>1}
@@ -14,7 +14,7 @@ flowchart TB;
     F --> J([i])
     J --> G{{For j=2 in range i**0.5}}
     G --> K([j])
-    K --> H{Remainder of: i/j == 0}
+    K --> H{i % j == 0}
     H -- TRUE --> I["Divisors=[j]"]
     H -- FALSE --> G
     I --> L{j < i**0.5}
@@ -26,6 +26,37 @@ flowchart TB;
 ```
 * Despues, teniendo en cuenta el diagrama de flujo escribí el pseudocodigo de la siguiente manera:
 ```pseudocode
+Algoritmo Numerosprimos
+	n=0
+	Divisors=[]
+	i=0
+	j=0
+	Escribir Insert number n
+	Leer n
+	Si n>1 Entonces
+		Mientras i==1 in range n Hacer
+			Mientras j==2 in range i**0.5 Hacer
+				Si i%j==0 Entonces
+					Divisors=[j]
+				Fin Si
+				Si j < i**0.5 Entonces
+					#ir a j
+				SiNo
+					Si length of Divisors==0 Entonces
+						Leer Divisors
+					SiNo
+						#ir a i
+					Fin Si
+				Fin Si
+			Fin Mientras
+		Fin Mientras
+	SiNo
+		Escribir Insert an integer number > 1
+	Fin Si
+FinAlgoritmo
+```
+* Intento de código:
+```code
 #Variables:
 n : int = 0
 i : int
@@ -34,12 +65,12 @@ Divisors = []
 #Inicio
 print("Insert number n")
 n=int( input("n: "))
-if (n > 1): #¿Debo escribirlo cómo entonces o puedo dejarlo asi?
+if (n > 1):
 | for i=1 in range n:
 | | for j=2 in range i^0.5:
-| | |  if remainder of i/j=0: #¿cómo poner el residuo?
+| | |  if i%j=0: 
 | | |  | Divisors.append(j)
-| | |    if j < i^0.5:
+| | |    if j < i**0.5:
 | | |    | #¿cómo poner se devuelve a for j?
 | | |    else:
 | | |     if the length of Divisors=0: #¿cómo poner la logitud?
