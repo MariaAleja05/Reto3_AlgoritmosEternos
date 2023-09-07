@@ -62,8 +62,10 @@ FinAlgoritmo
 * Intento de código:
 ```code
 #Variables
-n : 0
-Divisors : [] 
+n : int = 0
+Divisors = [] 
+i : int = 0
+j : int = 0
 #START
 print("Insert number n")
 n=int( input("n: "))
@@ -114,8 +116,8 @@ Algoritmo RaizCuadrada
 	X=0
 	Xnew=0
 	n=0
-	Escribir Insert number X
-	Leer X
+	Escribir Insert number n
+	Leer n
 	Si n>0 Entonces
 		X=n/2
 		Leer X
