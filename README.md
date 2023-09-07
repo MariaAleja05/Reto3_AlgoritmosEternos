@@ -109,6 +109,31 @@ Referencia: http://ojs.urepublicana.edu.co/index.php/ingenieria/article/view/347
 
 * Despues, teniendo en cuenta el diagrama de flujo escribí el pseudocodigo de la siguiente manera:
 ```pseudocode
+Algoritmo RaizCuadrada
+	X=0
+	Xnew=0
+	n=0
+	Escribir Insert number X
+	Leer X
+	Si n>0 Entonces
+		X=n/2
+		Leer X
+		Xnew=(0.5)*((X)+(n/X))
+		Si X-Xnew<0.00001 Entonces
+			Escribir "n^0.5 is:"
+			Leer Xnew
+		SiNo
+			X=Xnew
+			#Devolverse linea 9
+		Fin Si
+	SiNo
+		Escribir Insert an integer number > 0
+		#ir a donde se ingresa el X
+	Fin Si
+FinAlgoritmo
+```
+* Intento de código:
+```code
 #Variables:
 n : int = 0
 X : int
@@ -119,7 +144,7 @@ n=int( input("n: "))
 if (n > 0): #¿Debo escribirlo cómo entonces o puedo dejarlo asi?
 | X=n/2
 | Y=(0.5)*((X)+(n/X))
-| if X-Y<0.0001:
+| if X-Y<0.00001:
 | | print(√n is:)
 | | print(Y)
 | else:
