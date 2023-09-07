@@ -140,19 +140,20 @@ FinAlgoritmo
 #Variables:
 n : int = 0
 X : int
-Y : int
+Xnew : int
 #Inicio
 print("Insert number n")
 n=int( input("n: "))
-if (n > 0): #¿Debo escribirlo cómo entonces o puedo dejarlo asi?
+if (n > 0):
 | X=n/2
-| Y=(0.5)*((X)+(n/X))
-| if X-Y<0.00001:
+| print(X)
+| Xnew=(0.5)*((X)+(n/X))
+| if X-Xnew<0.00001:
 | | print(√n is:)
 | | print(Y)
 | else:
-|  X=Y
-|  #¿cómo devolver a X?
+|  X=Xnew
+|  #Devolver linea 10 del print
 else:
   print("Insert an integer number > 0")  #¿cómo devolverlo paso de insertar?
 #Fin
