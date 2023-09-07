@@ -34,25 +34,29 @@ Algoritmo Numerosprimos
 	Escribir Insert number n
 	Leer n
 	Si n>1 Entonces
-		Mientras i==1 in range n Hacer
-			Mientras j==2 in range i**0.5 Hacer
+		Para i<-1 Hasta n Hacer
+			Para j<-2 Hasta i^0.5 Hacer
 				Si i%j==0 Entonces
 					Divisors=[j]
-				Fin Si
-				Si j < i**0.5 Entonces
-					#ir a j
-				SiNo
-					Si length of Divisors==0 Entonces
-						Leer Divisors
+					Si j<i^0.5 Entonces
+						#Ir a j
 					SiNo
-						#ir a i
+						Si length of Divisors==0 Entonces
+							Leer Divisors
+						SiNo
+							#Ir a i
+						Fin Si
 					Fin Si
+				SiNo
+					#Devolver a j
 				Fin Si
-			Fin Mientras
-		Fin Mientras
+			Fin Para
+		Fin Para
 	SiNo
 		Escribir Insert an integer number > 1
+		#Ir a inicio
 	Fin Si
+FinAlgoritmo
 FinAlgoritmo
 ```
 * Intento de código:
@@ -85,22 +89,24 @@ else:
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo, me basé en el método de Newton Raphson:
 ```mermaid
 flowchart TB;
-    A([START])--> B["X=0 ; Y=0; n=0"]
-    B --> C["Insert number n"]
+    A([START])--> B["X=0 ; Xnew=0; n=0"]
+    B --> C["Insert number X"]
     C --> D[/n/]
     D --> E{"n > 0"}
     E -->|NO| F["Insert an integer number > 0"]
     F ----> C
     E -->|YES| H["X=n/2"]
     H --> Z([X])
-    Z --> J["Y=(0.5)*((X)+(n/X))"]
-    J --> I{"X-Y < 0.0001"}
-    I -- FALSE --> K["X=Y"]
+    Z --> J["Xnew=(0.5)*((X)+(n/X))"]
+    J --> I{"X-Xnew < 0.00001"}
+    I -- FALSE --> K["X=Xnew"]
     K --> Z
     I -- TRUE --> M["√n is:"]
-    M --> N[/Y/]
+    M --> N[/Xnew/]
     N --> O((END))
 ```
+Referencia: http://ojs.urepublicana.edu.co/index.php/ingenieria/article/view/347/314
+
 * Despues, teniendo en cuenta el diagrama de flujo escribí el pseudocodigo de la siguiente manera:
 ```pseudocode
 #Variables:
