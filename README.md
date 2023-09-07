@@ -85,7 +85,7 @@ else:
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo, me basé en el método de Newton Raphson:
 ```mermaid
 flowchart TB;
-    A([START])--> B["X==0 ; Y==0; n==0"]
+    A([START])--> B["X=0 ; Y=0; n=0"]
     B --> C["Insert number n"]
     C --> D[/n/]
     D --> E{"n > 0"}
