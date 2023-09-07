@@ -61,29 +61,30 @@ FinAlgoritmo
 ```
 * Intento de código:
 ```code
-#Variables:
-n : int = 0
-i : int
-j : int
-Divisors = []
-#Inicio
+#Variables
+n : 0
+Divisors : [] 
+#START
 print("Insert number n")
 n=int( input("n: "))
-if (n > 1):
-| for i=1 in range n:
-| | for j=2 in range i^0.5:
-| | |  if i%j=0: 
-| | |  | Divisors.append(j)
-| | |    if j < i**0.5:
-| | |    | #¿cómo poner se devuelve a for j?
-| | |    else:
-| | |     if the length of Divisors=0: #¿cómo poner la logitud?
-| | |     | print(Divisors)
-| | |     else:
-| | |       #¿cómo devolverlo al for del i?
+if n>1:
+    for i=1 in range n:
+        print(i)
+        for j=2 in range i**0.5:
+            print(j)
+            if i%j==0: 
+                Divisors.append(j)
+                if j<(i**0.5):
+                    #Devolverse a j
+                else: 
+                    if the length of Divisors==0 #¿Cómo escribir eso?
+                        print(Divisors)
+                    else:
+                        #Devolverse a i      
 else:
-  print("Insert an integer number > 1")  #¿cómo devolverlo paso de insertar?
-#Fin
+    print("Insert an integer number > 1")
+    #Devolverse a Inser number n
+#END
 ```
 **2.** Algoritmo para obtener la raiz cuadrada de un número n
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo, me basé en el método de Newton Raphson:
