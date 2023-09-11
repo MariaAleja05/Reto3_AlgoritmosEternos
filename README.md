@@ -39,16 +39,10 @@ Algoritmo Numerosprimos
 				Si i%j==0 Entonces
 					Divisors=[j]
 					Si j<i^0.5 Entonces
-						#Ir a j
-					SiNo
 						Si length of Divisors==0 Entonces
 							Leer Divisors
-						SiNo
-							#Ir a i
 						Fin Si
 					Fin Si
-				SiNo
-					#Devolver a j
 				Fin Si
 			Fin Para
 		Fin Para
@@ -98,11 +92,9 @@ Algoritmo RaizCuadrada
 			Leer Xnew
 		SiNo
 			X=Xnew
-			#Devolverse linea 9
 		Fin Si
 	SiNo
 		Escribir Insert an integer number > 0
-		#ir a donde se ingresa el X
 	Fin Si
 FinAlgoritmo
 ```
