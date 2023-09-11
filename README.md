@@ -59,35 +59,6 @@ Algoritmo Numerosprimos
 FinAlgoritmo
 FinAlgoritmo
 ```
-* Intento de código:
-```code
-#Variables
-n : int = 0
-Divisors = [] 
-i : int = 0
-j : int = 0
-#START
-print("Insert number n")
-n=int( input("n: "))
-if n>1:
-    for i=1 in range n:
-        print(i)
-        for j=2 in range i**0.5:
-            print(j)
-            if i%j==0: 
-                Divisors.append(j)
-                if j<(i**0.5):
-                    #Devolverse a j
-                else: 
-                    if the length of Divisors==0 #¿Cómo escribir eso?
-                        print(Divisors)
-                    else:
-                        #Devolverse a i      
-else:
-    print("Insert an integer number > 1")
-    #Devolverse a Inser number n
-#END
-```
 **2.** Algoritmo para obtener la raiz cuadrada de un número n
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo, me basé en el método de Newton Raphson:
 ```mermaid
@@ -134,27 +105,4 @@ Algoritmo RaizCuadrada
 		#ir a donde se ingresa el X
 	Fin Si
 FinAlgoritmo
-```
-* Intento de código:
-```code
-#Variables:
-n : int = 0
-X : int
-Xnew : int
-#Inicio
-print("Insert number n")
-n=int( input("n: "))
-if (n > 0):
-| X=n/2
-| print(X)
-| Xnew=(0.5)*((X)+(n/X))
-| if X-Xnew<0.00001:
-| | print(√n is:)
-| | print(Y)
-| else:
-|  X=Xnew
-|  #Devolver linea 10 del print
-else:
-  print("Insert an integer number > 0")  #¿cómo devolverlo paso de insertar?
-#Fin
 ```
