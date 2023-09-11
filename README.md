@@ -1,4 +1,4 @@
-# Reto número 4 repo
+# Reto número 3 repo
 ### Fecha:  30-08-2023
 **1.** Algoritmo para obtener los números primos hasta un número n
 * Primero realicé el diagrama de flujo para facilitar el proceso de creación del pseudocódigo:
