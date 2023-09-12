@@ -48,7 +48,6 @@ Algoritmo Numerosprimos
 		Fin Para
 	SiNo
 		Escribir Insert an integer number > 1
-		#Ir a inicio
 	Fin Si
 FinAlgoritmo
 FinAlgoritmo
